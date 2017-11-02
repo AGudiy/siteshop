@@ -1,0 +1,21 @@
+.inputreg{
+	width: 234px;
+	height: 34px;
+	border-radius: 5px;
+}
+
+.textarea{
+	width: 500px;
+	height: 300px;
+	border-radius: 7px;
+}
+
+.price{
+	width: 100px;
+	height: 34px;
+	border-radius: 5px;
+}
+
+.clearfix{
+	width: 30%;
+}
