@@ -1,6 +1,3 @@
-<?php
-if (isset($_SESSION['ruser'])){
-?>
 <div class="container adm">
 <div class="row">
 	<script type="text/javascript">
@@ -149,6 +146,3 @@ if(isset($_POST['addbtn']))
 </div>
 </div>
 </div>
-<?php
-}
-?>

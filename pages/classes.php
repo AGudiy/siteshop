@@ -185,7 +185,9 @@ class Item
 		$this->imagepath=$imagepath;
 		$this->action=$action;
 	}
-
+	function getCatid(){
+		return $this->catid;
+	}
 	function intoDb()
 	{
 		try{
@@ -265,6 +267,31 @@ class Item
 		return false;
 		}
 	}
+	
+    static function MaxPrice()
+    {
+    	try{
+		$pdo=Tools::connect();
+		$ps=$pdo->prepare("SELECT pricesale FROM Items");
+		$ps->execute();
+		while($row=$ps->fetch()){
+			$a[]=$row['pricesale'];
+		}
+		$maxprice=$a[0];
+		for($i=1; $i<count($a); $i++){
+			if($a[$i]>$maxprice){
+				$maxprice=$a[$i];
+			}
+		}
+		return $maxprice;
+		}
+		catch(PDOException $e)
+		{
+			echo $e->getMessage();
+			return false;
+		}
+    }
+
 
 	function Draw(){
 		echo "<div class='col-sm-3 col-md-3 col-lg-3' style='height:300px'>";

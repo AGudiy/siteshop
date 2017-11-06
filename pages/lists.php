@@ -8,6 +8,6 @@ if($items==null)exit();
 //drawing selected items
 foreach($items as $item)
 {
-$item->Draw();
+	$item->Draw();
 }
 ?>

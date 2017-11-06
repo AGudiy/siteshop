@@ -1,4 +1,3 @@
-<form action="index.php?page=1" method="post">
 <div class="row" style="margin-right:10px;">
 <select class="pull-right inputreg" name="catid" onchange="getItemsCat(this.value)">
 <option value="0">Select category...</option>
@@ -19,7 +18,7 @@ $items=Item::GetItems();
 
 foreach($items as $item)
 {
-	$item->Draw();
+		$item->Draw();
 }
 echo '</div>';
 ?>
